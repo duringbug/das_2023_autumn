@@ -3,11 +3,11 @@
  * @Author: 唐健峰
  * @Date: 2023-09-12 17:32:27
  * @LastEditors: ${author}
- * @LastEditTime: 2023-09-12 18:07:18
+ * @LastEditTime: 2023-09-12 18:14:34
 -->
 # duringbug(唐健峰 10225501408的week1作业)
 <strong>
-作业在python/index.ipynb下
+作业在python/index.py下
 </strong>
 
 # dase-2023-autumn

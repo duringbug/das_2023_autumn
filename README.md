@@ -1,3 +1,15 @@
+<!--
+ * @Description: 
+ * @Author: 唐健峰
+ * @Date: 2023-09-12 17:32:27
+ * @LastEditors: ${author}
+ * @LastEditTime: 2023-09-12 18:07:18
+-->
+# duringbug(唐健峰 10225501408的week1作业)
+<strong>
+作业在python/index.ipynb下
+</strong>
+
 # dase-2023-autumn
 Introduction to Data Science and Engineering - 2023 Autumn
 

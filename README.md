@@ -7,7 +7,7 @@
 -->
 # duringbug(唐健峰 10225501408的week1作业)
 ```bash
-python/index.py
+python python/index.py
 ```
 结果
 ```bash

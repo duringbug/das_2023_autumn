@@ -3,7 +3,7 @@
  * @Author: 唐健峰
  * @Date: 2023-09-12 17:32:27
  * @LastEditors: ${author}
- * @LastEditTime: 2023-09-19 18:04:53
+ * @LastEditTime: 2023-09-25 13:28:11
 -->
 # duringbug(唐健峰 10225501408的week1作业)
 ```bash
@@ -31,3 +31,4 @@ DataScienceandEngineering
 week1作业在python/index.py下
 </strong>
 
+# [week2作业传送门](/lecture02/README.md)

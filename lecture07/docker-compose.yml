@@ -1,0 +1,26 @@
+version: '3'
+services:
+  mysql:
+    container_name: mysql
+    image: mysql:1.0
+    environment:
+      MYSQL_ROOT_PASSWORD: Tjf04712
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      my-network:
+        ipv4_address: 172.20.0.10 # 自定义静态 IP 地址
+
+volumes:
+  mysql-data:
+
+
+networks:
+  my-network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.20.0.0/16

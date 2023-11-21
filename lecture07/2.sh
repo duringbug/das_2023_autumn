@@ -1,0 +1,5 @@
+mysql -h 127.0.0.1 -P 3307 -u root -p
+# CREATE USER 'txt'@'172.20.0.1' IDENTIFIED BY 'Tjf04712';
+# GRANT ALL PRIVILEGES ON dub.* TO 'txt'@'172.20.0.1';
+# FLUSH PRIVILEGES;
+# EXIT;

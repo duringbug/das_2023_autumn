@@ -4,12 +4,13 @@ Description:
 Author: 唐健峰
 Date: 2023-12-19 13:22:23
 LastEditors: ${author}
-LastEditTime: 2024-01-18 12:53:32
+LastEditTime: 2024-01-18 13:34:11
 '''
 
 from redis_util.index import get_vectors
 from data_util.tf_idf import *
 import numpy as np
+import sqlite3
 
 
 WORD_DIMENSION = 10
@@ -20,17 +21,6 @@ title_vectors, text_vectors, title, text ,herf_data,model= get_vectors(WORD_DIME
 def test_tf_idf():
     # 计算TF-IDF
     tfidf_documents = calculate_tfidf(text)
-
-    conn = sqlite3.connect('/Volumes/TJF_YINGPAN/class/DaSE导论/dase-2023-autumn/final/python/data/data.db')
-    cursor = conn.cursor()
-
-    # 创建表（如果不存在）
-    cursor.execute('''
-        CREATE TABLE IF NOT EXISTS text_idf (
-            herf TEXT PRIMARY KEY,
-            count REAL
-        )
-    ''')
 
     # 打印每个文档的关键词及其对应的前三个最大TF-IDF值
     for i, tfidf_doc in enumerate(tfidf_documents):
@@ -45,15 +35,9 @@ def test_tf_idf():
         print(f"文档 {i + 1} 的前三大TF-IDF值:")
         for word in top3_tfidf_words:
             print(f"{word}: {tfidf_doc[word]:.4f}")
-        cursor.execute('INSERT OR REPLACE INTO text_idf (herf, count) VALUES (?, ?)', (herf_data[i], top3_tfidf_words))
         print()
-    # 提交更改并关闭连接
-    conn.commit()
-    conn.close()
-
 
 def test_print():
-    import sqlite3
     from sklearn.feature_extraction.text import TfidfVectorizer
 
     # 将二维列表转换为字符串列表
@@ -93,6 +77,6 @@ def test_print():
     conn.commit()
     conn.close()
 
-test_tf_idf()
+# test_tf_idf()
 
 test_print()

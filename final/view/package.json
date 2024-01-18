@@ -11,7 +11,14 @@
     "type-check": "vue-tsc --build --force"
   },
   "dependencies": {
+    "@types/axios": "^0.14.0",
+    "@visactor/vchart": "^1.8.7",
+    "axios": "^1.6.5",
+    "axois": "^0.0.1-security",
+    "echarts": "^5.4.3",
+    "sqlite3": "^5.1.7",
     "vue": "^3.3.11",
+    "vue-echarts": "^6.6.8",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {

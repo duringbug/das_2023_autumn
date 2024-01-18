@@ -3,10 +3,11 @@
  * @Author: 唐健峰
  * @Date: 2023-07-07 03:48:19
  * @LastEditors: ${author}
- * @LastEditTime: 2023-12-13 11:08:42
+ * @LastEditTime: 2023-12-22 10:02:31
  */
 import axios from 'axios';
 import { load } from 'cheerio';
+import { cpSync } from 'fs';
 
 interface News {
     title: string;
@@ -109,12 +110,7 @@ export async function getNew1(): Promise<News[]> {
                 }
             });
             await Promise.all(promises);
-            const data: { [key: string]: string } = newsList.reduce((result: any, news) => {
-                const { link } = news;
-                const jsonString = JSON.stringify(news, null, 2);
-                result[link] = jsonString;
-                return result;
-            }, {});
+            resolve(newsList)
         } catch (error) {
             console.error('An error occurred while crawling Baidu news:', error);
             resolve(newsList)

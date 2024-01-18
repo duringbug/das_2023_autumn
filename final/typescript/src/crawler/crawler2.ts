@@ -97,12 +97,7 @@ export async function getNew2(): Promise<News[]> {
                 }
             });
             await Promise.all(promises);
-            const data: { [key: string]: string } = newsList.reduce((result: any, news) => {
-                const { link } = news;
-                const jsonString = JSON.stringify(news, null, 2);
-                result[link] = jsonString;
-                return result;
-            }, {});
+            resolve(newsList)
         } catch (error) {
             console.error('An error occurred while crawling Baidu news:', error);
             resolve(newsList)

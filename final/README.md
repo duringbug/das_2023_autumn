@@ -3,6 +3,8 @@
   Your browser does not support the video tag.
 </video>
 
+# [视频介绍](final/resources/项目介绍.mp4)
+
 # 爬取新闻获得热度词的项目
 
 # 首先爬取数据:

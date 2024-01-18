@@ -3,6 +3,8 @@
   Your browser does not support the video tag.
 </video>
 
+# 爬取新闻获得热度词的项目
+
 # 首先爬取数据:
 ```bash
 cd typescript
